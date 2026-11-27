@@ -17,7 +17,6 @@ import java.util.Map;
 
 @RestController
 @RequestMapping("/api/v1")
-@CrossOrigin(origins = "*")
 public class ShieldHerController {
 
     private final GeminiThreatService geminiThreatService;
@@ -61,7 +60,7 @@ public class ShieldHerController {
     }
 
     @GetMapping("/analytics/summary")
-    public ResponseEntity getAnalyticsSummary() {
+    public ResponseEntity<Map<String, Long>> getAnalyticsSummary() {
         long totalScans = threatAnalyticRepository.count();
         return ResponseEntity.ok(Map.of("totalScans", totalScans));
     }
