@@ -5,7 +5,7 @@ import java.util.List;
 public class ThreatAnalysisResponse {
 
     private String riskLevel; // "LOW", "MEDIUM", or "HIGH"
-    private int riskScore; // 0 to 100
+    private Integer riskScore;
     private String summary;
     private List<String> redFlags;
     private List<String> actionSteps;
@@ -15,7 +15,7 @@ public class ThreatAnalysisResponse {
 
     public ThreatAnalysisResponse(
             String riskLevel,
-            int riskScore,
+            Integer riskScore,
             String summary,
             List<String> redFlags,
             List<String> actionSteps
@@ -35,11 +35,11 @@ public class ThreatAnalysisResponse {
         this.riskLevel = riskLevel;
     }
 
-    public int getRiskScore() {
+    public Integer getRiskScore() {
         return riskScore;
     }
 
-    public void setRiskScore(int riskScore) {
+    public void setRiskScore(Integer riskScore) {
         this.riskScore = riskScore;
     }
 

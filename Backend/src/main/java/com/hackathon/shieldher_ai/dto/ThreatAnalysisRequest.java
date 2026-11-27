@@ -1,13 +1,16 @@
 package com.hackathon.shieldher_ai.dto;
 
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Size;
 
 public class ThreatAnalysisRequest {
 
     @NotBlank(message = "Message or URL content is required")
+    @Size(max = 4000)
     private String content;
 
-    private String language; // "English", "Sinhala", "Tamil", or "Urdu"
+    @Size(max = 20)
+    private String language;
 
     public String getContent() {
         return content;
