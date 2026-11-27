@@ -14,7 +14,10 @@ public class SandboxScenario {
     @Column(columnDefinition = "TEXT")
     private String promptText;
 
+    @Column(name = "option_a")
     private String optionA;
+
+    @Column(name = "option_b")
     private String optionB;
     private Character correctOption;
 
